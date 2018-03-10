@@ -35,3 +35,16 @@ func isPalindrome(x int) bool {
 	}
 	return true
 }
+
+func isPalindromeAnother(x int) bool {
+	sum := 0
+	origin := x
+	if x < 0 {
+		return false
+	}
+	for x > 0 {
+		sum = sum*10 + x%10
+		x = x / 10
+	}
+	return origin == sum
+}

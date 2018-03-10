@@ -24,3 +24,12 @@ func Test_isPalindrome(t *testing.T) {
 	assert.Equal(t, false, isPalindrome(21))
 	assert.Equal(t, true, isPalindrome(78887))
 }
+
+func Test_isPalindromeAnother(t *testing.T) {
+	assert.Equal(t, true, isPalindromeAnother(11))
+	assert.Equal(t, true, isPalindromeAnother(1))
+	assert.Equal(t, false, isPalindromeAnother(7788))
+	assert.Equal(t, true, isPalindromeAnother(787))
+	assert.Equal(t, false, isPalindromeAnother(21))
+	assert.Equal(t, true, isPalindromeAnother(78887))
+}
