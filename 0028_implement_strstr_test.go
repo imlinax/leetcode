@@ -8,7 +8,7 @@ import (
 
 func Test_strStr(t *testing.T) {
 	haystack := "hello"
-	needle = "ll"
+	needle := "ll"
 	assert.Equal(t, 2, strStr(haystack, needle))
 
 	haystack = "aaaaa"

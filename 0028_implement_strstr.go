@@ -15,5 +15,26 @@ Output: -1
 package leetcode
 
 func strStr(haystack string, needle string) int {
-
+	if len(needle) < 1 {
+		return 0
+	}
+	for i := range haystack {
+		flag := true
+		if haystack[i] == needle[0] {
+			for j := range needle {
+				hIndex := i + j
+				if hIndex > len(haystack)-1 {
+					return -1
+				}
+				if needle[j] != haystack[hIndex] {
+					flag = false
+					break
+				}
+			}
+			if flag {
+				return i
+			}
+		}
+	}
+	return -1
 }
